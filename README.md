@@ -1,6 +1,6 @@
 # fireCMS-analytics
 
- fireCMS의 analytics
+fireCMS의 analytics
 
 ## 특징
 
@@ -11,18 +11,9 @@
 `<FireCMSCore>`에 서비스를 추가해준다. 코드를 추가한다.
 
 ```typescript
-import Analytics from 'fireCMS/analytics';
-
-...
-
-<FireCMSCore
-  ...
-  services={{
-    analytics: Analytics,
-  }}
->
-  {props.children}
-</FireCMSCore>
+// FireCMS 초기화
+Core.initialize(firebaseConfig);
+Core.initializeService(FireAnalytics);
 
 ...
 ```
